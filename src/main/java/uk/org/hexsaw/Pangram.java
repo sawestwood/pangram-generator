@@ -18,8 +18,9 @@ public class Pangram {
 
             charsInWord.removeAll(charsInSentence);
             if (charsInWord.size() > 0) {
-                // Word contains letter we can use
+                // Word contains one or more letters we can use
                 wordsInSentence.add(word);
+                charsInSentence.addAll(charsInWord);
             }
             if (charsInSentence.size() == ALPHABET_LETTER_COUNT) {
                 break;
